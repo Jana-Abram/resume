@@ -1,57 +1,54 @@
 <div>
-    <h2>{{program.excursion.name}}</h2>
+  <h2>{{program.excursion.name}}</h2>
   <p><strong>Location:</strong> {{program.excursion.location.city}}, {{program.excursion.location.country}}</p>
   <p><strong>Date:</strong> {{program.excursion.date}}</p>
 
-   <h3>Program</h3>
+  <h2>Program</h2>
   {{#each program.excursion.program}}
-    <h4>{{this.name}}</h4>
-    <p><strong>Type:</strong> {{this.type}}</p>
-    <p><strong>Duration:</strong> {{this.duration}} hours</p>
+  {{#with details}}
+  <h2>{{this.name}}</h2>
+  <p><strong>Type:</strong> {{this.type}}</p>
+  <p><strong>Duration:</strong> {{this.duration}} hours</p>
 
       
-    {{#if this.details.museum}}
-      <h2>Museum</h2>
-      <p><strong>Name:</strong> {{this.details.museum.name}}</p>
-      <p><strong>Location:</strong> {{this.details.museum.location.address}}, {{this.details.museum.location.city}}, {{this.details.museum.location.country}}</p>
-       <h2>Exhibits</h2>
-      <ul>
-        {{#each this.details.museum.exhibits}}
-          <li>
-            <p><strong>Name:</strong> {{this.name}}</p>
-            {{#if this.artist}}
-              <p><strong>Artist:</strong> {{this.artist}}</p>
-            {{else}}
-              <p><strong>Artist:</strong> Unknown</p>
-            {{/if}}
-            <p><strong>Description:</strong> {{this.description}}</p>
-            <p><strong>Audio Guide:</strong> {{this.audio_guide}}</p>
-          </li>
-        {{/each}}
-      </ul>
-       <h2>Guide</h2>
-      <p><strong>Name:</strong> {{this.details.guide.name}}</p>
-      <p><strong>Language:</strong> {{this.details.guide.language}}</p>
-      <p><strong>Rating:</strong> {{this.details.guide.rating}}</p>
-       {{else if this.details.venue}}
-      <h2>Venue</h2>
-      <p><strong>Name:</strong> {{this.details.venue.name}}</p>
-      <p><strong>Location:</strong> {{this.details.venue.location.address}}, {{this.details.venue.location.city}}, {{this.details.venue.location.country}}</p>
+    {{#if museum}}
+      <h2>Museum Details</h2>
+      <p>Name: {{museum.name}}</p>
+      <p>Location: {{museum.location.address}}, {{museum.location.city}}, {{museum.location.country}}</p>
+      <h2>Exhibits</h42
+          <ul>
+            {{#each museum.exhibits}}
+              <li>
+                <p>Name: {{name}}</p>
+                {{#if artist}}
+                  <p>Artist: {{artist}}</p>
+                {{else}}
+                  <p>Artist: Unknown</p>
+                {{/if}}
+                <p>Description: {{description}}</p>
+                <p>Audio Guide: {{audio_guide}}</p>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
 
-      <h2>Performers</h2>
-      <ul>
-        {{#each this.details.performers}}
-          <li>
-            <p><strong>Name:</strong> {{this.name}}</p>
-            <p><strong>Type:</strong> {{this.type}}</p>
-          </li>
-        {{/each}}
-      </ul>
-      <h2>Guide</h2>
-      <p><strong>Name:</strong> {{this.details.guide.name}}</p>
-      <p><strong>Language:</strong> {{this.details.guide.language}}</p>
-      <p><strong>Rating:</strong> {{this.details.guide.rating}}</p>
+       {{#if venue}}
+          <h2>Performers</h2>
+          <ul>
+            {{#each performers}}
+              <li>
+                <p>Name: {{name}}</p>
+                <p>Type: {{type}}</p>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
 
-      {{/if}}
+        <h2>Guide</h2>
+        <p>Name: {{guide.name}}</p>
+        <p>Language: {{guide.language}}</p>
+        <p>Rating: {{guide.rating}}</p>
+      </div>
+    {{/with}}
     {{/each}}
 </div>
