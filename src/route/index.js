@@ -259,7 +259,7 @@ router.get('/work', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: "basic",
+    layout: "basic",  
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -452,6 +452,7 @@ router.get('/bio', function (req, res) {
 })
 
 // ================================================================
+ program
 
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -539,6 +540,7 @@ router.get('/program', function (req, res) {
 
 // ================================================================
 
+ web
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
@@ -668,6 +670,9 @@ router.get('/web', function (req, res) {
 })
 
 // ================================================================
+=======
+ master
+ master
 
 // Підключаємо роутер до бек-енду
 module.exports = router
