@@ -258,7 +258,7 @@ router.get('/work', function (req, res) {
 
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
-  res.render('person', {
+  res.render('person', {   
     layout: "person",
     person: {
       name: 'Emma Johnson',
@@ -452,6 +452,7 @@ router.get('/bio', function (req, res) {
 })
 
 // ================================================================
+ program
 
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -538,6 +539,8 @@ router.get('/program', function (req, res) {
 })
 
 // ================================================================
+
+ master
 
 // Підключаємо роутер до бек-енду
 module.exports = router
