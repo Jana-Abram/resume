@@ -1,0 +1,77 @@
+<div>
+  <h2>{{name}}</h2>
+  <p>{{description}}</p>
+
+  <h3>History</h3>
+  <p>Year: {{history.year}}</p>
+  <p>Founder: {{history.founder}}</p>
+  <hr>
+
+   <h3>Types</h3>
+  <ul>
+    {{#each types}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  <hr>
+
+  <h3>Syntax</h3>
+  <ul>
+    {{#each syntax.variables}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  <ul>
+    {{#each syntax.functions}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  <ul>
+     {{#each syntax.conditionals}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  <ul>
+    {{#each syntax.loops}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  <ul>
+    {{#each syntax.classes}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+   <hr>
+  <h3>Features</h3>
+  <ul>
+    {{#each features}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+
+   <h3>Libraries</h3>
+  <ul>
+    {{#each libraries}}
+       <button type="button" class="btn btn-link">{{this}}</button>
+    {{/each}}
+  </ul>
+
+  <h3>Tools</h3>
+  <ul>
+    {{#each tools}}
+     <button type="button" class="btn btn-link">{{this}}</button>
+    {{/each}}
+  </ul>
+
+   <h3>Community</h3>
+  <ul>
+    {{#each community}}
+      <li>
+        <p><strong>Name:</strong> {{this.name}}</p>
+        <p><strong>Type:</strong> {{this.type}}</p>
+         <button type="button" class="btn btn-link">{{this.name}}</button>
+      </li>
+    {{/each}}
+  </ul>
+
+  </div>
