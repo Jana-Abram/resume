@@ -452,9 +452,6 @@ router.get('/bio', function (req, res) {
 })
 
 // ================================================================
- program
-
- facebook
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -698,8 +695,6 @@ router.get('/program', function (req, res) {
 })
 
 // ================================================================
-
- web
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
