@@ -613,7 +613,6 @@ router.get('/facebook', function (req, res) {
 })
 
 // ================================================================
-=======
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
@@ -830,8 +829,6 @@ router.get('/web', function (req, res) {
 })
 
 // ================================================================
-=======
-
 
 // Підключаємо роутер до бек-енду
 module.exports = router
