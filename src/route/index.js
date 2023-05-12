@@ -452,9 +452,6 @@ router.get('/bio', function (req, res) {
 })
 
 // ================================================================
- program
-
-mac
 router.get('/mac', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -628,8 +625,6 @@ router.get('/program', function (req, res) {
 })
 
 // ================================================================
-
- web
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
@@ -759,9 +754,5 @@ router.get('/web', function (req, res) {
 })
 
 // ================================================================
-=======
- master
- 
-
 // Підключаємо роутер до бек-енду
 module.exports = router
