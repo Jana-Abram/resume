@@ -1,0 +1,76 @@
+<main>
+  <div>
+  <h1>Heading</h1>
+  <h6>Paragraph</h6>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <br>
+  <br>
+  <button type="button" class="btn btn-outline-primary">Outline Primary</button>
+  <h1>{{heading.main.title}}</h1>
+  <p>{{heading.main.text}}</p>
+  <button>{{heading.main.button_text.solid}}</button>
+  <button>{{heading.main.button_text.outline}}</button>
+  <hr>
+  <h4>H2 Heading second</h4>
+  <h6>Paragraph</h6>
+  <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+  <br>
+  <br>
+  <button type="button" class="btn btn-outline-secondary" disabled>Secondary</button>
+  <h2>{{heading.second.title}}</h2>
+  <p>{{heading.second.text}}</p>
+   <button>{{heading.second.button_text.solid}}</button>
+  <button>{{heading.second.button_text.outline}}</button>
+  <hr>
+  </div>
+
+  <div>
+    <h3>H3 Heading subblock </h3>
+    <h6>Paragraph</h6>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+    <h3>{{heading.subblock.title}}</h3>
+    <p>{{heading.subblock.text}}</p>
+     <button>{{heading.subblock.button_text.solid}}</button>
+    <button>{{heading.subblock.button_text.outline}}</button>
+    <hr>
+  </div>
+
+  <h2>{{nested_display.title}}</h2>
+  <div>
+    <h1>Display 1 nested</h1>
+    <h5>Display 4 children</h5>
+    <h6>Paragraph</h6>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <h3>{{nested_display.children_display.title}}</h3>
+    <p>{{nested_display.children_display.text}}</p>
+    <button>{{nested_display.children_display.button.text}}</button>
+    <hr>
+  </div>
+
+  <h6>H6 Heading</h6>
+  <button type="button" class="btn btn-info">Info</button>
+  <p>{{nested_display.header_text}}</p>
+  <button>{{nested_display.button.text}}</button>
+  <hr>
+
+  <div>
+    <h5 class="text-uppercase">Paragraph</h5>
+    <h6>Paragraph</h6>
+    <button type="button" class="btn btn-link">Link</button>
+    <ul>
+      {{#each paragraph.list_name}}
+        <li>
+          <a href="{{url}}" target="_blank">{{text}}</a>
+        </li>
+      {{/each}}
+    </ul>
+
+    <h2>{{paragraph.title}}</h2>
+    <p>{{paragraph.text}}</p>
+    <button>{{paragraph.button.text}}</button>
+    <hr>
+  </div>
+</main>
