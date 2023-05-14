@@ -1,0 +1,77 @@
+<div>
+ <div class="card">
+ <div class="card-body">
+    
+    <div class="card">
+    <div class="card-body">
+    <h1>{{heading.main.title}}</h1>
+    <p>{{heading.main.text}}</p>
+    <button type="button" class="btn btn-primary">Open page</button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-outline-primary">Add to cart</button>
+    </div>
+    </div>
+    <br>
+    
+    <div class="card">
+    <div class="card-body">
+    <h2>{{heading.second.title}}</h2>
+    <p>{{heading.second.text}}</p>
+    <button type="button" class="btn btn-secondary">Open page</button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-outline-secondary">Add to cart</button>
+    </div>
+    </div>
+    <br>
+    
+    <div class="card">
+    <div class="card-body">
+    <h3>{{heading.subblock.title}}</h3>
+    <p>{{heading.subblock.text}}</p>
+    <button type="button" class="btn btn-dark">Open page</button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-outline-dark">Add to cart</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+    
+    <div class="card">
+    <div class="card-body">
+    
+    <div class="card">
+    <div class="card-body"> 
+    <h2 class="display-1">{{nested_display.title}}</h2>
+    <h3 class="display-4">{{nested_display.children_display.title}}</h3>
+    <p>{{nested_display.children_display.text}}</p>
+    <button type="button" class="btn btn-outline-warning">Open</button>
+    </div>
+    </div>
+
+    <h6>{{nested_display.header_text}}</h6>
+    <button type="button" class="btn btn-outline-info">Learn more</button>
+    </div>
+    </div>
+    <br>
+    
+    <div class="card">
+    <div class="card-body">
+    <div class="text-uppercase">{{paragraph.title}}</div>
+    <p>{{paragraph.text}}</p>
+    <button type="button" class="btn btn-link">Open link page</button>
+    <div class="card">
+    <div class="card-body">
+    <ul>
+        {{#each paragraph.list_name}}
+        <li><a href="{{url}}">{{text}}</a></li>
+        {{/each}}
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
