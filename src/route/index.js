@@ -519,7 +519,7 @@ router.get('/task21', function (req, res) {
     },
   })
   //   ↑↑ сюди вводимо JSON дані
-}}
+})
 // ================================================================
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
