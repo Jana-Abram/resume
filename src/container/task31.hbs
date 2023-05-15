@@ -1,0 +1,202 @@
+<div> 
+  {{#each navigation.links}}
+   <a class="btn btn-link" href="{{this.href}}" role="button">{{this.text}}</a>
+  {{/each}}
+  <a class="btn btn-primary" href="https://nodejs.org/en/" role="button">Let's start</a>
+  <hr>
+  <br>
+  <br>
+  <h1>{{header.title}}</h1>
+  <p>{{header.description}}</p>
+  <a class="btn btn-primary" href="https://www.youtube.com/" role="button">Learn more</a>
+  <br>
+  <br>
+  <hr>
+  </div>
+
+
+ <h2>{{city.title}}</h2>
+ <br>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  {{#each city.cards}}
+    <div class="col">
+      <div class="card">
+        <img src="https://picsum.photos/400/200" class="card-img-top" alt="{{this.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{this.name}}</h5>
+          <p class="card-text">{{this.description}}</p>
+          <a class="btn btn-primary" href="{{this.link}}" role="button">Read</a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+<br>
+<hr>
+
+<div>
+ <h2>{{winner.title}}</h2>
+<br>
+
+ <table class="table table-hover">
+   <thead>
+      <tr>
+        {{#each winner.table.head}}
+        <th>{{this}}</th>
+        {{/each}}
+      </tr>
+    </thead>
+    <tr>
+      <tbody>
+       {{#each winner.table.user}}
+       <tr>
+        <td>{{place}}</td>
+        <td>{{name}}</td>
+        <td>{{surname}}</td>
+        <td>{{nickname}}</td>
+       </tr>
+       {{/each}}
+      </tbody>
+    </tr>
+</table>
+</div>
+<br>
+<hr>
+
+<div>
+   <h2>{{gallery.title}}</h2>
+   <br>
+</div>
+
+<div class="row">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+      {{#each gallery.items}}
+       <a class="list-group-item">{{this.title}}</a>
+      {{/each}}
+     <a class="list-group-item  " >The Mona Lisa</a>
+      <a class="list-group-item " >Painting</a>
+      <a class="list-group-item " >Oil in poplar panel</a>
+      <a class="list-group-item " >1503-1519</a>
+    </div>
+  </div>
+      
+  <div class="col-4">
+   <div class="list-group" id="list-tab" role="tablist">
+     {{#each gallery.items}}
+        <a class="list-group-item">{{this.category}}</a>
+      {{/each}}
+      <a class="list-group-item ">The Persistence of Memory</a>
+      <a class="list-group-item " >Painting</a>
+      <a class="list-group-item " >Oil on canvas</a>
+      <a class="list-group-item ">1931</a>
+  </div>
+</div>
+<div class="col-4">
+   <div class="list-group" id="list-tab" role="tablist">
+     {{#each gallery.items}}
+        <a class="list-group-item">{{this.medium}}</a>
+      {{/each}}
+      <a class="list-group-item ">The Srarry Night</a>
+      <a class="list-group-item " >Painting</a>
+      <a class="list-group-item " >Oil on canvas</a>
+      <a class="list-group-item " >1889</a>
+  </div>
+  <br>
+</div>
+<br>
+<hr>
+<br>
+
+<div>
+  <h2 class="display-3">{{relaxion.title}}</h2>
+  <br>
+  
+  <div class="row">
+    {{#each relaxion.cards}}
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card text-white bg-secondary">
+        <div class="card-header">{{this.header}}</div>
+        <div class="card-body">
+          <h5 class="card-title">{{this.title}}</h5>
+          <br>
+          <p class="card-text">{{this.description}}</p>
+        </div>
+      </div>
+      <br>
+    </div>
+    {{/each}}
+  </div>
+</div>
+<hr>
+<br>
+
+<div>
+  <div class="row">
+    {{#each rest.cards}}
+    <div class="col-6">
+      <div class="card text-center">
+        <div class="card-header">{{header}}</div>
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{description}}</p>
+          <a href="#" class="btn btn-primary">{{button}}</a>
+        </div>
+        <div class="card-footer text-body-secondary">{{footer}}</div>
+      </div>
+      <br>
+    </div>
+    {{/each}}
+  </div>
+  <br>
+  <hr>
+  <br>
+</div>
+
+<div>
+  <h2 class="display-2">{{proposition.title}}</h2>
+  <br>
+  <div class="row">
+    {{#each proposition.card}}
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card text-white bg-warning">
+        <div class="card-header">{{header}}</div>
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{description}}</p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  <br>
+  <hr>
+  <br>
+</div>
+
+  <div class="row">
+  <div class="col-3">
+    {{#each footer.navigation}}
+    <div class="table">
+      <a href="{{href}}">{{text}}</a>
+    </div>
+    {{/each}}
+  </div>
+  <div class="col-3">
+    {{#each footer.socialMedia}}
+    <div class="table">
+      <a class="btn btn-outline-dark" href="{{link}}">{{name}}</a>
+    </div>
+    {{/each}}
+  </div>
+  <div class="col-3">
+    {{#each footer.partners}}
+    <div class="table">
+      <a class="btn btn-outline-info" href="{{link}}">{{name}}</a>
+    </div>
+    {{/each}}
+  </div>
+</div>
+</div>
+
