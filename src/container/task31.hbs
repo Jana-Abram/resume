@@ -2,7 +2,7 @@
   {{#each navigation.links}}
    <a class="btn btn-link" href="{{this.href}}" role="button">{{this.text}}</a>
   {{/each}}
-  <a class="btn btn-primary" href="https://nodejs.org/en/" role="button">Let's start</a>
+  <a class="btn btn-primary" href="{{navigation.button.href}}" role="button">{{navigation.button.text}}</a>
   <hr>
   <br>
   <br>
