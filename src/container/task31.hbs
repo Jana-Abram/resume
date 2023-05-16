@@ -67,47 +67,33 @@
 <div>
    <h2>{{gallery.title}}</h2>
    <br>
-</div>
-
-<div class="row">
-  <div class="col-4">
-    <div class="list-group" id="list-tab" role="tablist">
-      {{#each gallery.items}}
-       <a class="list-group-item">{{this.title}}</a>
-      {{/each}}
-     <a class="list-group-item  " >The Mona Lisa</a>
-      <a class="list-group-item " >Painting</a>
-      <a class="list-group-item " >Oil in poplar panel</a>
-      <a class="list-group-item " >1503-1519</a>
+   
+   <div class="row">
+    {{#each gallery.cards}}
+    <div class="col-4 g-2">
+      <div class="card">
+        <div>
+          <div class="card-header">
+            <h6>{{name}}</h6>
+          </div>
+          <ul class="list-group list-group-flush">
+            {{#each items}}
+            <li class="list-group-item">
+              {{this}}
+            </li>
+            {{/each}}
+            </li>
+        </div>
+      </div>
     </div>
-  </div>
-      
-  <div class="col-4">
-   <div class="list-group" id="list-tab" role="tablist">
-     {{#each gallery.items}}
-        <a class="list-group-item">{{this.category}}</a>
-      {{/each}}
-      <a class="list-group-item ">The Persistence of Memory</a>
-      <a class="list-group-item " >Painting</a>
-      <a class="list-group-item " >Oil on canvas</a>
-      <a class="list-group-item ">1931</a>
-  </div>
-</div>
-<div class="col-4">
-   <div class="list-group" id="list-tab" role="tablist">
-     {{#each gallery.items}}
-        <a class="list-group-item">{{this.medium}}</a>
-      {{/each}}
-      <a class="list-group-item ">The Srarry Night</a>
-      <a class="list-group-item " >Painting</a>
-      <a class="list-group-item " >Oil on canvas</a>
-      <a class="list-group-item " >1889</a>
-  </div>
+    {{/each}}
+   </div>
   <br>
-</div>
 <br>
 <hr>
 <br>
+
+
 
 <div>
   <h2 class="display-3">{{relaxion.title}}</h2>
