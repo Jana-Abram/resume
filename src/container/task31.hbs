@@ -8,7 +8,7 @@
   <br>
   <h1>{{header.title}}</h1>
   <p>{{header.description}}</p>
-  <a class="btn btn-primary" href="https://www.youtube.com/" role="button">Learn more</a>
+  <a class="btn btn-primary" href="{{header.button.link}}" role="button">{{header.button.text}}</a>
   <br>
   <br>
   <hr>
@@ -26,7 +26,7 @@
         <div class="card-body">
           <h5 class="card-title">{{this.name}}</h5>
           <p class="card-text">{{this.description}}</p>
-          <a class="btn btn-primary" href="{{this.link}}" role="button">Read</a>
+          <a class="btn btn-primary" href="{{button.href}}" role="button">{{button.text}}</a>
         </div>
       </div>
     </div>
