@@ -58,6 +58,9 @@
         <div class="card-body">
           <h5 class="card-title">{{title}}</h5>
           <p class="card-text">{{description}}</p>
+          {{#if isHot}}
+          <span class="badge bg-warning">Hot</span>
+          {{/if}}
           {{#if isNew}}
           <span class="badge bg-primary">New</span>
           {{/if}}
