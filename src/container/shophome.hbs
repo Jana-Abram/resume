@@ -21,6 +21,9 @@
     <div class="col">
       <div class="card text-bg-dark mb-3">
         <div class="card-header">{{title}}
+        {{#if isTop}}
+          <span class="badge bg-warning">Top</span>
+          {{/if}}
           {{#if isNew}}
           <span class="badge bg-success">New</span>
           {{/if}}
@@ -55,9 +58,6 @@
         <div class="card-body">
           <h5 class="card-title">{{title}}</h5>
           <p class="card-text">{{description}}</p>
-          {{#if isHot}}
-          <span class="badge bg-warning">Hot</span>
-          {{/if}}
           {{#if isNew}}
           <span class="badge bg-primary">New</span>
           {{/if}}
