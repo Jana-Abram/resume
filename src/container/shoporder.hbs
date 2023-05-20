@@ -1,0 +1,286 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="nav d-flex">
+        {{#each navigation.links}}
+        <div class="nav-item">
+          <a class="nav-link mr-3" href="{{this.href}}" role="button">{{this.text}}</a>
+        </div>
+        {{/each}}
+        <a class="nav-link disabled">Disabled</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <h1 class="mt-5">{{header}}</h1>
+    <h2 class="mt-5">{{contacts_data.title}}</h2>
+    {{#each contacts_data.buttons}}
+    <button class=" mt-3 {{#if isPrimary}}btn btn-warning text-light{{else}}btn btn-outline-warning{{/if}}">
+      {{text}}
+    </button>
+    {{/each}}
+                
+   <div class="form">
+    {{#each contacts_data.form.input}}
+     <form class="row g-3 mt-3">
+    <div class="col-6">
+      <label class="form-label" >{{label}}</label>
+      <input class="form-control text-muted"  type="text" placeholder="{{placeholder}}">
+      <span class="caption">{{caption}}</span>
+    </div>
+    {{/each}}
+    </div>
+     </form>
+
+      <hr>
+
+    <div class="row g-3">
+        <div class="col">
+     <div class="form-check form-switch">
+      {{#each contacts_data.form.switch}}
+      <div class="switch">
+        <input class="form-check-input "  {{#if isActive}}checked{{/if}}>
+        <label class="form-check-label" >{{text}}</label>
+      </div>
+      {{/each}}
+    </div>
+          <br>
+          <hr>
+        </div>
+      </div>
+    </form>
+  </div>
+
+ <div class="col">
+ <div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <div class="card mt-5 mb-5" style="width: 18rem;">
+        <div class="card-body">
+          {{#each action_block}}
+          <li class="list-group-item">
+            <a href="#" class="mt-2 btn {{#if isSuccess}}btn-success{{else if isDanger}}btn-danger{{else if isInfo}}btn-info{{/if}}">
+              {{text}}
+            </a>
+          </li>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+    <div class="card mt-5 ms-5" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{total.title}}</h5>
+        <ul class="list-group">
+       
+        {{#each total.item_list}}
+           <li class="list-group-item" >{{name}} {{price}}</li>
+       {{/each}}
+       
+         {{#each total.additional_info}}
+        <li class="list-group-item"> {{text}}: {{value}}</li>
+        {{/each}}
+         
+          <li class="list-group-item">
+            {{total.total_price.text}}
+            <span>{{total.total_price.value}}</span>
+          </li>
+
+          <li class="list-group-item">
+            {{#each total.button}}
+            <button class="mt-3 {{#if isPrimary}}btn btn-primary{{else if isOutline}}btn btn-outline-primary{{/if}}">
+              {{text}}
+            </button>
+            {{/each}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ </div>
+
+ <h2>{{delivery.title}}</h2>
+ <div class="card mt-3">
+ <div class="card-body">
+ {{#each delivery.select}}
+    <div class="mb-3">
+      <label for="{{label}}" class="form-label">{{label}}</label>
+      <select class="form-select" id="{{label}}" aria-label="{{label}}" placeholder="{{placeholder}}">
+        <option selected>{{placeholder}}</option>
+        {{#each options}}
+        <option value="{{value}}">{{text}}</option>
+        {{/each}}
+      </select>
+    </div>
+    {{/each}}
+  </div>
+ </div>
+
+  <div class="delivery-type">
+    {{#each delivery.delivery_type}}
+    <div class="form-check">
+      <input class="form-check-input" type="radio">
+      <label class="form-check-label">{{type}}</label>
+    </div>
+    {{/each}}
+  </div>
+<hr>
+
+<div>
+  <div class="payment">
+    <div class="title"><h2>{{delivery.payment.title}}</h2></div>
+    <div class="form-check">
+      {{#each delivery.payment.list}}
+  <input class="form-check-input" type="radio">
+  <label class="form-check-label">{{type}}
+    <div class="form-text">{{description}}</div>
+    {{/each}}
+  </label>
+ </div>
+<hr>
+
+ <div class="contact">
+    <div class="title"><h2>{{delivery.contact.title}}</h2></div>
+
+     <div class="form">
+    {{#each contacts_data.form.input}}
+     <form class="row g-3 mt-2">
+    <div class="col-6">
+      <label class="form-label" >{{label}}</label>
+      <input class="form-control text-muted"  type="text" placeholder="{{placeholder}}">
+      <span class="caption">{{caption}}</span>
+    </div>
+    {{/each}}
+    </div>
+     </form>
+     <br>
+    <hr>
+
+ <div class="comment mb-4 mt-3">
+    <label>{{delivery.coment.label}}</label>
+    <input type="text" class="form-control" id="comment"  placeholder="{{delivery.coment.placeholder}}">
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <h2>{{coupon.title}}</h2>
+    <div class="row">
+      <div class="col">
+        <label for="availabel_coupon" class="form-label">{{coupon.select.availabel_coupon.label}}</label>
+        <select class="form-select" id="availabel_coupon" aria-label="Select coupon">
+          <option selected>{{coupon.select.availabel_coupon.placeholder}}</option>
+          {{#each coupon.select.availabel_coupon.options}}
+          <option value="{{this.value}}">{{this.text}}</option>
+          {{/each}}
+        </select>
+      </div>
+
+ <div class="col">
+        <label for="friend_coupon" class="form-label">{{coupon.select.friend_coupon.label}}</label>
+        <select class="form-select" id="friend_coupon" aria-label="Select coupon">
+          <option selected>{{coupon.select.friend_coupon.placeholder}}</option>
+          {{#each coupon.select.friend_coupon.options}}
+          <option value="{{this.value}}">{{this.text}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="add">
+    <div class="friend">
+      <label>{{coupon.add.friend.label}}</label>
+      <input type="text" class="form-control" placeholder="{{coupon.add.friend.placeholder}}">
+      <span class="caption">{{coupon.add.friend.caption}}</span>
+    </div>
+
+ <div class="colleague mt-3">
+      <label>{{coupon.add.colleague.label}}</label>
+      <input type="text" class="form-control" placeholder="{{coupon.add.colleague.placeholder}}">
+      <span class="caption">{{coupon.add.colleague.caption}}</span>
+    </div>
+  </div>
+</div>
+<hr>
+
+<div class="quiz">
+  <h2>{{quiz.title}}</h2>
+
+  <div class="form-group">
+    <label>{{quiz.preference.title}}</label>
+    {{#each quiz.preference.options}}
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="preference{{@index}}">
+      <label class="form-check-label" for="preference{{@index}}">{{this}}</label>
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="form-group mt-4">
+    <label for="experience">{{quiz.your_expirience.label}}</label>
+    <input class="form-control" id="experience"></input>
+  </div>
+
+ <div class="purchase-frequency mt-4">
+    <label>{{quiz.purchase_frequency.label}}</label>
+    <select class="form-control"> 
+      <option  value=""  disabled selected>{{quiz.purchase_frequency.placeholder}}</option>
+      {{#each quiz.purchase_frequency.options}}
+      <option value="{{value}}">{{text}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class="form-group mt-4">
+    <label>{{quiz.factors.title}}</label>
+    {{#each quiz.factors.options}}
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="factor{{@index}}">
+      <label class="form-check-label" for="factor{{@index}}">{{this}}</label>
+    </div>
+    {{/each}}
+  </div>
+</div>
+<hr>
+
+<div class="row g-2">
+  {{#each footer}}
+      <div class="nav col-2">
+        <div>
+          {{#each this}}
+             <div>
+              <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
+             </div>
+        {{/each}}
+       </div>
+     </div>
+ {{/each}}
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
