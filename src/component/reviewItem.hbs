@@ -1,0 +1,42 @@
+<div class="card mt-4">
+  <div class="card-body">
+    <h5 class="card-title">{{title.userName}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{title.caption}}</h6>
+    <p class="card-text">{{title.date}}</p>
+    <div class="review-details">
+      <h6 class="card-subtitle mb-2">{{reviewBody.seller.title}}</h6>
+      <p class="card-text">{{reviewBody.seller.value}}</p>
+      <h6 class="card-subtitle mb-2">{{reviewBody.rating.title}}</h6>
+      <p class="card-text">{{reviewBody.rating.value}}</p>
+    </div>
+    <div class="review-text">
+      {{#each reviewBody.text}}
+      <p>{{this}}</p>
+      {{/each}}
+    </div>
+    <div class="review-images">
+      {{#each reviewBody.images}}
+      <img src="{{this}}" alt="Review Image" class="review-image">
+      {{/each}}
+    </div>
+    <div class="advantages">
+      <h6 class="card-subtitle mb-2">{{reviewBody.advantages.title}}</h6>
+      <p class="card-text">{{reviewBody.advantages.text}}</p>
+    </div>
+    <div class="disadvantages">
+      <h6 class="card-subtitle mb-2">{{reviewBody.disadvantages.title}}</h6>
+      <p class="card-text">{{reviewBody.disadvantages.text}}</p>
+    </div>
+
+   {{#each reviewList}}
+ {{#each coments}}
+   <div class="card mt-4">
+    <div class="card-body">
+<p>{{text}}</p>
+ </div>
+  </div>
+{{/each}}
+  {{/each}}
+
+  </div>
+</div>
