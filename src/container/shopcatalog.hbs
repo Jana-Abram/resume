@@ -1,0 +1,189 @@
+<main>
+    <div class="card">
+    <div class="nav d-flex">
+   {{#each navigation.links}}
+        <div class="nav-item">
+        <a class="nav-link mr-3" href="{{this.href}}" role="button">{{this.text}}</a>
+        </div>
+   {{/each}}
+   <a class="nav-link disabled">Disabled</a>
+   </div>
+   </div>
+   </div>
+   </div>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb" >
+    {{#each breadcrumb}}
+     <li class="breadcrumb-item" >
+     {{#if this.url}}
+     <a href="{{this.url}}">{{this.name}}</a>
+    {{else}}
+     <span>{{this.name}}</span>
+    {{/if}}
+    </li>
+    {{/each}}
+  </ol>
+</nav>
+
+<h1>{{header}}</h1>
+
+<div class="dropdown">
+    {{#each sortBlock}}
+    <select  class="btn btn-light dropdown-toggle"  placeholder="{{this.placeholder}}">
+        {{#each this.options}}
+        <option value="{{this.value}}">{{this.text}}</option>
+        {{/each}}
+    </select>
+    {{/each}}
+</div>
+
+<div class="row mt-4">
+    <div class="col-2">
+    <div class="card">
+    <div class="card-body">
+    <div class="main-card">
+    <div class="card-body">
+        <div class="filter-container">
+        <div class="filter-card">
+            <h3>{{filterBlock.sellers.title}}</h3>
+            <ul>
+            {{#each filterBlock.sellers.list}}
+            <li>
+                <input type="checkbox" value="{{this.value}}">
+                {{this.value}}
+            </li>
+            {{/each}}
+            </ul>
+        </div>
+       <hr>
+        <div class="filter-card">
+            <h3>{{filterBlock.brands.title}}</h3>
+            {{#if filterBlock.brands.input}}
+            <input type="text" placeholder="{{filterBlock.brands.input.placeholder}}">
+            {{/if}}
+            <ul>
+            {{#each filterBlock.brands.options}}
+            <li>
+                <input type="checkbox" value="{{this.value}}">
+                {{this.value}}
+            </li>
+            {{/each}}
+            </ul>
+        </div>
+       <hr>
+        <div class="filter-card">
+            <h3>{{filterBlock.price.title}}</h3>
+            <p>Від: {{filterBlock.price.range.from}}</p>
+            <p>До: {{filterBlock.price.range.to}}</p>
+            <button type="button">
+            {{filterBlock.price.button.text}}
+            </button>
+      </div>
+        <hr>
+      <div class="filter-card">
+        <h3>{{filterBlock.filterList.[0].title}}</h3>
+        <ul>
+            {{#each filterBlock.filterList.[0].options}}
+        <li>
+            <input type="checkbox" value="{{this.value}}">
+            {{this.value}}
+        </li>
+            {{/each}}
+        </ul>
+      </div>
+        <hr>
+
+        <div class="filter-card">
+        <h3>{{filterBlock.filterList.[1].title}}</h3>
+        <ul>
+            {{#each filterBlock.filterList.[1].options}}
+        <li>
+            <input type="checkbox" value="{{this.value}}">
+            {{this.value}}
+        </li>
+            {{/each}}
+        </ul>
+        </div>
+      <hr>
+
+      <div class="filter-card">
+        <h3>{{filterBlock.filterList.[2].title}}</h3>
+        <ul>
+        {{#each filterBlock.filterList.[2].options}}
+         <li>
+            <input type="checkbox" value="{{this.value}}">
+            {{this.value}}
+         </li>
+        {{/each}}
+        </ul>
+      </div>
+        <hr>
+
+      <div class="filter-card">
+        <h3>{{filterBlock.filterList.[3].title}}</h3>
+        <ul>
+        {{#each filterBlock.filterList.[3].options}}
+            <li>
+                <input type="checkbox" value="{{this.value}}">
+                {{this.value}}
+            </li>
+        {{/each}}
+            </ul>
+      </div>
+        <hr>
+
+      <div class="filter-card">
+        <h3>{{filterBlock.filterList.[4].title}}</h3>
+        <ul>
+        {{#each filterBlock.filterList.[4].options}}
+        <li>
+            <input type="checkbox" value="{{this.value}}">
+            {{this.value}}
+        </li>
+        {{/each}}
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+<div class="col-5">
+    <div class="menu">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+        {{#each goodsList}}
+            {{> catalogItem this}}
+        {{/each}}
+        </div>
+    </div>
+</div>
+
+  <div class="card text-light text-center mt-4 bg-success  ">
+        <div class="card-body">
+            <h2 class="card-title">{{service.title}}</h2>
+            <p class="card-text">{{service.description}}</p>
+            {{#each service.buttons}}
+        <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+        {{/each}}
+        </div>
+    </div>
+    <hr>
+
+<div class="row g-2">
+  {{#each footer}}
+      <div class="nav col-2">
+        <div>
+          {{#each this}}
+             <div>
+              <a class="nav-link {{#if @last}} disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
+             </div>
+        {{/each}}
+       </div>
+     </div>
+ {{/each}}
+</div>
+
+</main>
