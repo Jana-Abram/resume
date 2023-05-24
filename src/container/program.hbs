@@ -1,0 +1,67 @@
+<div>
+  <main>
+<div class="container">
+  <h2>{{program.excursion.name}}</h2>
+  <p><strong>Location:</strong> {{program.excursion.location.city}}, {{program.excursion.location.country}}</p>
+  <p><strong>Date:</strong> {{program.excursion.date}}</p>
+
+  <h2>Program</h2>
+  <div class="row">
+    {{#each program.excursion.program}}
+    {{#with details}}
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h2>{{this.name}}</h2>
+          <p><strong>Type:</strong> {{this.type}}</p>
+          <p><strong>Duration:</strong> {{this.duration}} hours</p>
+
+          {{#if museum}}
+          <h2>Museum Details</h2>
+          <p>Name: {{museum.name}}</p>
+          <p>Location: {{museum.location.address}}, {{museum.location.city}}, {{museum.location.country}}</p>
+          <h2>Exhibits</h2>
+          <ul>
+            {{#each museum.exhibits}}
+            <li>
+              <p>Name: {{name}}</p>
+              {{#if artist}}
+              <p>Artist: {{artist}}</p>
+              {{else}}
+              <p>Artist: Unknown</p>
+              {{/if}}
+              <p>Description: {{description}}</p>
+              <p>Audio Guide: {{audio_guide}}</p>
+            </li>
+            {{/each}}
+          </ul>
+          {{/if}}
+
+          {{#if venue}}
+          <h2>Performers</h2>
+          <ul>
+            {{#each performers}}
+            <li>
+              <p>Name: {{name}}</p>
+              <p>Type: {{type}}</p>
+            </li>
+            {{/each}}
+          </ul>
+          {{/if}}
+
+          <h2>Guide</h2>
+          <p>Name: {{guide.name}}</p>
+          <p>Language: {{guide.language}}</p>
+          <p>Rating: {{guide.rating}}</p>
+        </div>
+      </div>
+    </div>
+    {{/with}}
+    {{/each}}
+  </div>
+</div>
+    </main>
+</div>
+
+
+

@@ -1,80 +1,180 @@
 <div>
-  <h2>{{name}}</h2>
-  <p><strong>Birthdate:</strong> {{birthdate}}</p>
-  <p><strong>Birthplace:</strong> {{birthplace}}</p>
-  <p><strong>Deathdate:</strong> {{deathdate}}</p>
-  <p><strong>Deathplace:</strong> {{deathplace}}</p>
-  <p><strong>Nationality:</strong> {{nationality}}</p>
-  <p><strong>Occupation:</strong> {{occupation}}</p>
+  <main>
 
-  <h2>Known for</h2>
-  <ul>
-    {{#each known_for}}
-      <li>{{this}}</li>
-    {{/each}}
-  </ul>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-lg-4">
+      <div class="text-center">
+        <h2>{{name}}</h2>
+        <h3>Personal Information</h3>
+      </div>
+      <div class="text-center">
+        <p>
+          <strong>Birthdate:</strong> {{birthdate}}<br>
+          <strong>Birthplace:</strong> {{birthplace}}<br>
+          <strong>Deathdate:</strong> {{deathdate}}<br>
+          <strong>Deathplace:</strong> {{deathplace}}<br>
+          <strong>Nationality:</strong> {{nationality}}<br>
+          <strong>Occupation:</strong> {{occupation}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
 
-  <h2>Education</h2>
-    {{#each education}}
-    <p><strong>Degree:</strong> {{degree}}</p>
-    <p><strong>Field:</strong> {{field}}</p>
-    <p><strong>Institution:</strong> {{institution}}</p>
-    <p><strong>Year:</strong> {{year}}</p>
-  {{/each}}
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-lg-4">
+      <div class="text-center">
+        <h5>Known for</h5>
+      </div>
+      <ul class="list-group list-group-flush text-center">
+        {{#each known_for}}
+        <li class="list-group-item">{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+<hr>
 
-  <h2>Notable publications</h2>
-   {{#each notable_publications}}
-    <p><strong>Title:</strong> {{title}}</p>
-    <p><strong>Year:</strong> {{year}}</p>
-    <p><strong>Publisher:</strong> {{publisher}}</p>
-  {{/each}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2>Education</h2>
+      {{#each education}}
+        <p><strong>Degree:</strong> {{degree}}</p>
+        <p><strong>Field:</strong> {{field}}</p>
+        <p><strong>Institution:</strong> {{institution}}</p>
+        <p><strong>Year:</strong> {{year}}</p>
+      {{/each}}
+    </div>
+  </div>
+  <hr>
+  <div class="row mt-4">
+    <div class="col-lg-12 text-center">
+      <h2>Notable publications</h2>
+      {{#each notable_publications}}
+        <p><strong>Title:</strong> {{title}}</p>
+        <p><strong>Year:</strong> {{year}}</p>
+        <p><strong>Publisher:</strong> {{publisher}}</p>
+      {{/each}}
+    </div>
+  </div>
+  <hr>
+  <div class="row mt-4">
+    <div class="col-lg-12 text-center">
+      <h2>Partners</h2>
+      {{#each partners}}
+        <p><strong>Name:</strong> {{name}}</p>
+        <p><strong>Relationship:</strong> {{relationship}}</p>
+        <p><strong>Years:</strong> {{years}}</p>
+      {{/each}}
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center">Awards</h2>
+      <ul class="list-group list-group-flush">
+        {{#each awards}}
+        <li class="list-group-item">
+          <p class="text-center"><strong>Title:</strong> {{title}}</p>
+          <p class="text-center"><strong>Year:</strong> {{year}}</p>
+          <p class="text-center"><strong>Description:</strong> {{description}}</p>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <h2>Partners</h2>
-  {{#each partners}}
-    <p><strong>Name:</strong> {{name}}</p>
-    <p><strong>Relationship:</strong> {{relationship}}</p>
-    <p><strong>Years:</strong> {{years}}</p>
-  {{/each}}
 
-   
-  <h2>Awards</h2>
-  {{#each awards}}
-    <p><strong>Title:</strong> {{title}}</p>
-    <p><strong>Year:</strong> {{year}}</p>
-    <p><strong>Description:</strong> {{description}}</p>
-  {{/each}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th colspan="2"><h2>Influences</h2></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each influences}}
+          <tr>
+            <td>{{this}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
 
-   <h2>Influences</h2>
-  <ul>
-    {{#each influences}}
-      <li>{{this}}</li>
-    {{/each}}
-  </ul>
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th colspan="2"><h2>Influenced</h2></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each influenced}}
+          <tr>
+            <td>{{this}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
 
-  <h2>Influenced</h2>
-  <ul>
-    {{#each influenced}}
-      <li>{{this}}</li>
-    {{/each}}
-  </ul>
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th colspan="2"><h2>Quotes</h2></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each quotes}}
+          <tr>
+            <td>{{this}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
-  <h2>Quotes</h2>
-  <ul>
-    {{#each quotes}}
-      <li>{{this}}</li>
-    {{/each}}
-  </ul>
 
-  <h2>Major Discoveries</h2>
-  {{#each major_discoveries}}
-    <p><strong>Title:</strong> {{title}}</p>
-    <p><strong>Year:</strong> {{year}}</p>
-    <p><strong>Description:</strong> {{description}}</p>
-  {{/each}}
-  
-   <h2>Contributions</h2>
-  <p><strong>Title:</strong> {{contributions.title}}</p>
-  <p><strong>Description:</strong> {{contributions.description}}</p>
-  <p><strong>Year:</strong> {{contributions.year}}</p>
-  <p><strong>Field:</strong> {{contributions.field}}</p>
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="text-center">Major Discoveries</h2>
+      <div class="card">
+        <div class="card-body">
+          {{#each major_discoveries}}
+          <div class="mb-3">
+            <h5 class="card-title text-center">{{title}}</h5>
+            <p class="card-text"><strong>Year:</strong> {{year}}</p>
+            <p class="card-text"><strong>Description:</strong> {{description}}</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-lg-12">
+      <h2 class="text-center">Contributions</h2>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{contributions.title}}</h5>
+          <p class="card-text"><strong>Description:</strong> {{contributions.description}}</p>
+          <p class="card-text"><strong>Year:</strong> {{contributions.year}}</p>
+          <p class="card-text"><strong>Field:</strong> {{contributions.field}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
 </div>

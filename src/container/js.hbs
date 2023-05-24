@@ -1,0 +1,153 @@
+<div>
+
+<div class="container text-center">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="text-center">{{name}}</h2>
+      <p>{{description}}</p>
+
+      <h3>History</h3>
+      <p>Year: {{history.year}}</p>
+      <p>Founder: {{history.founder}}</p>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-header">
+      <h3>Types</h3>
+    </div>
+    <div class="card-body">
+      <ul>
+        {{#each types}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Syntax</h3>
+      
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Variables</h4>
+          <ul class="card-text">
+            {{#each syntax.variables}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card mt-2">
+        <div class="card-body">
+          <h4 class="card-title">Functions</h4>
+          <ul class="card-text">
+            {{#each syntax.functions}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card mt-2">
+        <div class="card-body">
+          <h4 class="card-title">Conditionals</h4>
+          <ul class="card-text">
+            {{#each syntax.conditionals}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card mt-2">
+        <div class="card-body">
+          <h4 class="card-title">Loops</h4>
+          <ul class="card-text">
+            {{#each syntax.loops}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card mt-2">
+        <div class="card-body">
+          <h4 class="card-title">Classes</h4>
+          <ul class="card-text">
+            {{#each syntax.classes}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Features</h3>
+      <ul class="card-text">
+        {{#each features}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Libraries</h3>
+      <ul class="card-text">
+        {{#each libraries}}
+          <li><button type="button" class="btn btn-link">{{this}}</button></li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-body">
+      <h3 class="card-title">Tools</h3>
+      <ul class="card-text">
+        {{#each tools}}
+          <li><button type="button" class="btn btn-link">{{this}}</button></li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Community</h3>
+      <ul class="card-text">
+        {{#each community}}
+          <li>
+            <div class="card mt-3">
+              <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <p class="card-text"><strong>Type:</strong> {{this.type}}</p>
+                <button type="button" class="btn btn-link">{{this.name}}</button>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </div>
