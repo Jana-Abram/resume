@@ -6,11 +6,16 @@
       <p>Version: {{version}}</p>
       <p>Description: {{description}}</p>
       <hr>
-
+  {{#each web.languages}}
+    <div>
+      <h2>{{name}}</h2>
+      <p>Version: {{version}}</p>
+      <p>Description: {{description}}</p>
       {{#if elements}}
         <h3>Elements</h3>
         <ul>
           {{#each elements}}
+
               <p><strong>Name:</strong> {{name}}</p>
               <p><strong>Description:</strong> {{description}}</p>
               {{#if attributes}}
@@ -24,6 +29,22 @@
                   {{/each}}
                 </ul>
               {{/if}}
+            <li>
+              <p><strong>Name:</strong> {{name}}</p>
+              <p><strong>Description:</strong> {{description}}</p>
+              
+              {{#if attributes}}
+                <h4>Attributes</h4>
+                <ul>
+                  {{#each attributes}}
+                    <li>
+                      <p><strong>Name:</strong> {{name}}</p>
+                      <p><strong>Description:</strong> {{description}}</p>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </li>
           {{/each}}
         </ul>
       {{/if}}
@@ -34,6 +55,10 @@
           {{#each properties}}
               <p><strong>Name:</strong> {{name}}</p>
               <p><strong>Description:</strong> {{description}}</p>
+            <li>
+              <p><strong>Name:</strong> {{name}}</p>
+              <p><strong>Description:</strong> {{description}}</p>
+              
               {{#if values}}
                 <h4>Values</h4>
                 <ul>
@@ -43,6 +68,14 @@
                   {{/each}}
                 </ul>
               {{/if}}
+                    <li>
+                      <p><strong>Value:</strong> {{value}}</p>
+                      <p><strong>Description:</strong> {{description}}</p>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </li>
           {{/each}}
         </ul>
       {{/if}}
@@ -51,6 +84,9 @@
         <h3>Functions</h3>
         <ul>
           {{#each functions}}
+              <p><strong>Name:</strong> {{name}}</p>
+              <p><strong>Description:</strong> {{description}}</p>
+            <li>
               <p><strong>Name:</strong> {{name}}</p>
               <p><strong>Description:</strong> {{description}}</p>
               {{#if parameters}}
@@ -63,6 +99,15 @@
                   {{/each}}
                 </ul>
               {{/if}}
+                    <li>
+                      <p><strong>Name:</strong> {{name}}</p>
+                      <p><strong>Type:</strong> {{type}}</p>
+                      <p><strong>Description:</strong> {{description}}</p>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </li>
           {{/each}}
         </ul>
       {{/if}}
@@ -70,5 +115,5 @@
   {{/each}}
 </div>
 </div>
-
+</div>
 
