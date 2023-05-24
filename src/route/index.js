@@ -3374,7 +3374,6 @@ router.get('/shopcatalog', function (req, res) {
           link: 'https://www.youtube.com/learning',
         },
       ],
-      [
         {
           text: 'Report History',
           link: 'https://www.youtube.com/feed/history/report_history',
