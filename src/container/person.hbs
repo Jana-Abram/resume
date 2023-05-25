@@ -1,12 +1,14 @@
 <div>
+  <main>
+    <div class="container text-center">
     {{#with person}}
     <div>
         <h1>{{name}}</h1>
          <p><strong>Age</strong> {{age}}</p>
          <p><strong>Gender</strong> {{gender}}</p>
+         <hr>
 
-
-        <div>
+        <div class="mt-4">
          <h2>Address</h2>
          <p><strong>Street</strong> {{address.street}}</p>
          <p><strong>City</strong> {{address.city}}</p>
@@ -14,8 +16,9 @@
          <p><strong>ZIP</strong> {{address.zip}}</p>
          <p><strong>Country</strong> {{address.country}}</p>
         </div>
-
-        <div>
+        
+        <hr>
+        <div class="mt-5">
          <h2>Education</h2>
          {{#each education}}
            <p><strong>Degree</strong> {{degree}}</p>
@@ -24,36 +27,41 @@
            <p><strong>Graduation Year</strong> {{graduationYear}}</p>
          {{/each}}
         </div>
+        <hr>
 
-         <h2>Work Experience</h2>
+         <h2 class="mt-5">Work Experience</h2>
          {{#each workExperience}}
           <p><strong>Company</strong> {{company}}</p>
           <p><strong>Title</strong> {{title}}</p>
           <p><strong>Start Date</strong> {{startDate}}</p>
           <p><strong>End Date</strong> {{endDate}}</p>
+          <hr>
           
-         <h2>Responsibilities</h2>
+         <h2 class="mt-5">Responsibilities</h2>
          {{#each responsibilities}}
           <li>{{this}}</li>
          {{/each}}
          </ul>
          <p><strong>Year Founded</strong> {{year_founded}}</p>
          <p><strong>Industry</strong> {{industry}}</p>
+         <hr>
 
-        <div>
-          <h2>Employees</h2>
+        <div> 
+          <h2 class="mt-5">Employees</h2>
           {{#each employees}}
           <p><strong>Name</strong> {{name}}</p>
           <p><strong>Position</strong> {{position}}</p>
           <p><strong>Department</strong> {{department}}</p>
+          <hr>
            
-         <h2>Projects</h2>
+         <h2 class="mt-5">Projects</h2>
          {{#each projects}}
          <p><strong>Name</strong> {{name}}</p>
          <p><strong>Description</strong> {{description}}</p>
          <p><strong>Status</strong> {{status}}</p>
+         <hr>
 
-         <h2>Teams</h2>
+         <h2 class="mt-5">Teams</h2>
           {{#each teams}}
           <p>
          <strong>Team Leader:</strong> {{team_leader.name}}
@@ -62,8 +70,9 @@
          <br>
          <strong>Email:</strong> {{team_leader.email}}
          </p>
+         <hr>
 
-         <h2>Team members</h2>
+         <h2 class="mt-5">Team members</h2>
          {{#each team_members}}
          <p>
           <strong>Name:</strong> {{name}}
@@ -73,16 +82,18 @@
           <strong>Email:</strong> {{email}}
           <br>
           <strong>Skills:</strong> {{#each skills}} {{this}}, {{/each}}
-          <br>
-          <h2>Projects:</h2>
+          <hr>
+
+          <h2 class="mt-5">Projects:</h2>
            {{#each projects}}
           <strong>Name:</strong> {{name}}
           <br>
           <strong>Description:</strong> {{description}}
           <br>
           <strong>Technologies:</strong> {{#each technologies}}{{this}}, {{/each}}
-          <br>
-          <h2>Team Members:</h2>
+          <hr>
+
+          <h2 class="mt-5">Team Members:</h2>
           {{#each team_members}}
           <br>
           <strong>Name:</strong> {{name}}
@@ -104,4 +115,8 @@
 
     </div>
     {{/with}}
+  </main>
 </div>
+
+
+

@@ -1,0 +1,146 @@
+<div>
+  <main>
+   <div class="card">
+  <div class="card-body">
+    <h2 class="card-title">{{name}}</h2>
+    <p class="card-text">{{description}}</p>
+     
+    <h3 class="card-subtitle">Price: ${{price}}</h3>
+    <h3 class="card-subtitle">Category: {{category}}</h3>
+
+    <h3 class="card-subtitle">Features</h3>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Processor</h4>
+        <ul class="card-text">
+          <li>Brand: {{features.processor.brand}}</li>
+          <li>Model: {{features.processor.model}}</li>
+          <li>Speed: {{features.processor.speed}}</li>
+          <li>Cores: {{features.processor.cores}}</li>
+          <li>Cache: {{features.processor.cache}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Memory</h4>
+        <ul class="card-text">
+          <li>Type: {{features.memory.type}}</li>
+          <li>Size: {{features.memory.size}}</li>
+          <li>Speed: {{features.memory.speed}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body">
+        <h4 class="card-title">Storage</h4>
+        <ul class="card-text">
+          <li>Type: {{features.storage.type}}</li>
+          <li>Size: {{features.storage.size}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body">
+        <h4 class="card-title">Display</h4>
+        <ul class="card-text">
+          <li>Size: {{features.display.size}}</li>
+          <li>Resolution: {{features.display.resolution}}</li>
+          <li>Technology: {{features.display.technology}}</li>
+          <li>Color Space: {{features.display.color_space}}</li>
+          <li>Brightness: {{features.display.brightness}}</li>
+          <li>Refresh Rate: {{features.display.refresh_rate}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body">
+        <h4 class="card-title">Graphics</h4>
+        <ul class="card-text">
+          <li>Brand: {{features.graphics.brand}}</li>
+          <li>Model: {{features.graphics.model}}</li>
+          <li>Memory: {{features.graphics.memory}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ports</h4>
+        {{#each features.ports}}
+          <ul class="card-text">
+            <li>Type: {{type}}</li>
+            <li>Count: {{count}}</li>
+            {{#if features}}
+              <li>Features:
+                <ul>
+                  {{#each features}}
+                    <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+              </li>
+            {{/if}}
+          </ul>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Battery</h4>
+        <ul class="card-text">
+          <li>Type: {{features.battery.type}}</li>
+          <li>Capacity: {{features.battery.capacity}}</li>
+          <li>Life: {{features.battery.life}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Weight: {{features.weight}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div class="card mt-4">
+      <div class="card-body">
+        <h4 class="card-title">Dimensions</h4>
+        <ul class="card-text">
+          <li>Height: {{features.dimensions.height}}</li>
+          <li>Width: {{features.dimensions.width}}</li>
+          <li>Depth: {{features.dimensions.depth}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Operating System: {{features.operating_system}}</h4>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Accessories</h4>
+        {{#each features.accessories}}
+          <ul class="card-text">
+            <li>Name: {{name}}</li>
+            <li>Price: ${{price}}</li>
+          </ul>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+</div>

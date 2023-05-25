@@ -1,0 +1,20 @@
+<tr>
+  <td>
+    <img src="{{item.image}}" alt="Товар" class="card-image" width="150">
+  </td>
+  <td colspan="3">
+    <h3 class="card-title">{{item.name}}</h3>
+    <p class="card-description">{{item.description}}</p>
+  </td>
+  <td>
+    <p>{{item.price.title}}: {{item.price.value}}</p>
+  </td>
+  <td>
+    <p>{{item.amount}}</p>
+    {{#each item.buttons}}
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button class="{{#if this.isPrimary}}mb-2 btn btn-primary primary{{/if}} {{#if this.isDanger}}btn btn-outline-danger danger{{/if}}">{{this.text}}</button>
+    </div>
+    {{/each}}
+  </td>
+</tr>

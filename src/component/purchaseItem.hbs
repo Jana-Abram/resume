@@ -1,0 +1,18 @@
+<tr class="item">
+  <th>{{number}}</th>
+  <th>{{status}}</th>
+  <th>
+    <span class="title">{{amount.title}}</span>
+    <span class="value">{{amount.value}}</span>
+  </th>
+  <td>
+    {{#each images}}
+    <img src="{{this}}" alt="Image">
+    {{/each}}
+  </td>
+  <td>
+    <a href="{{button.link}}" class="btn {{#if button.isPrimary}}btn-primary{{/if}}">
+      {{button.text}}
+    </a>
+  </td>
+</tr>
